@@ -39,9 +39,9 @@
 
   <link name="lfcaster">
     <collision name='lfcollision'>
-      <origin xyz="-0.4 0.605 .35" rpy="1.58 0 0"/>
+      <origin xyz="0 0 0" rpy="0 -1.55 0"/>
       <geometry>
-        <cylinder radius="0.167022" length="0.07"/>
+        <mesh scale=".0010 .0010 .0010" filename="package://lawnmow_description/meshes/caster.stl"/>
       </geometry>
 
       <surface>
@@ -65,13 +65,22 @@
           <color rgba="0 0 0 1"/>
       </material>
     </visual>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.5"/>
+      <cylinder_inertia m="1.5" r="0.167022" h="0.07"/>
+      <inertia
+        ixx="1.0" ixy="0.0" ixz="0.0"
+        iyy="1.0" iyz="0.0"
+        izz="1.0"/>
+    </inertial>
   </link>
 
   <link name="rfcaster">
     <collision name='rfcollision'>
-      <origin xyz="0.016 0.605 .35" rpy="1.58 0 0"/>
+      <origin xyz="0 0 0" rpy="0 -1.55 0"/>
       <geometry>
-        <cylinder radius="0.167022" length="0.07"/>
+        <mesh scale=".0010 .0010 .0010" filename="package://lawnmow_description/meshes/caster.stl"/>
       </geometry>
       <surface>
         <friction>
@@ -94,14 +103,22 @@
           <color rgba="0 0 0 1"/>
       </material>
     </visual>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.5"/>
+      <cylinder_inertia m="1.5" r="0.167022" h="0.07"/>
+      <inertia
+        ixx="1.0" ixy="0.0" ixz="0.0"
+        iyy="1.0" iyz="0.0"
+        izz="1.0"/>
+    </inertial>
   </link>
-
 
   <link name="left_wheel">
     <collision name="collision">
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <cylinder radius="0.167022" length="0.07"/>1.
+        <mesh scale=".0010 .0010 .0010" filename="package://lawnmow_description/meshes/wheel.stl"/>
       </geometry>
     </collision>
 
